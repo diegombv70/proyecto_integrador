@@ -1,0 +1,85 @@
+======================================================================
+RESUMEN DEL DATAFRAME - TELCO CUSTOMER CHURN
+Generado: 2026-10-25 20:08:04
+======================================================================
+
+1. Procedencia del dataset
+--------------------------
+Dataset       : Telco Customer Churn (IBM Sample Dataset)
+Identificador : scikit-learn/churn-prediction
+Enlace        : https://huggingface.co/datasets/scikit-learn/churn-prediction
+Configuracion : default
+Split         : train
+Revision      : aa09900373d90780ee70d27571775aff0e51569c
+Licencia      : CC BY 4.0
+Muestra       : No - DataFrame completo, sin filtros ni transformaciones
+Naturaleza    : Datos ficticios (IBM Sample Datasets)
+
+2. Dimensiones
+--------------
+Filas: 7043
+Columnas: 21
+
+3. Columnas y tipos de datos
+----------------------------
+ n          columna    tipo  valores_unicos
+ 1       customerID  object            7043
+ 2           gender  object               2
+ 3    SeniorCitizen   int64               2
+ 4          Partner  object               2
+ 5       Dependents  object               2
+ 6           tenure   int64              73
+ 7     PhoneService  object               2
+ 8    MultipleLines  object               3
+ 9  InternetService  object               3
+10   OnlineSecurity  object               3
+11     OnlineBackup  object               3
+12 DeviceProtection  object               3
+13      TechSupport  object               3
+14      StreamingTV  object               3
+15  StreamingMovies  object               3
+16         Contract  object               3
+17 PaperlessBilling  object               2
+18    PaymentMethod  object               4
+19   MonthlyCharges float64            1585
+20     TotalCharges  object            6531
+21            Churn  object               2
+
+4. Valores nulos por columna
+----------------------------
+Total de valores nulos: 0
+El DataFrame NO tiene valores nulos.
+Total de textos vacios (posibles faltantes): 11
+                  nulos  porcentaje_%  textos_vacios
+customerID            0           0.0              0
+gender                0           0.0              0
+SeniorCitizen         0           0.0              0
+Partner               0           0.0              0
+Dependents            0           0.0              0
+tenure                0           0.0              0
+PhoneService          0           0.0              0
+MultipleLines         0           0.0              0
+InternetService       0           0.0              0
+OnlineSecurity        0           0.0              0
+OnlineBackup          0           0.0              0
+DeviceProtection      0           0.0              0
+TechSupport           0           0.0              0
+StreamingTV           0           0.0              0
+StreamingMovies       0           0.0              0
+Contract              0           0.0              0
+PaperlessBilling      0           0.0              0
+PaymentMethod         0           0.0              0
+MonthlyCharges        0           0.0              0
+TotalCharges          0           0.0             11
+Churn                 0           0.0              0
+
+5. Muestra de datos (primeras 5 filas)
+--------------------------------------
+   customerID  gender  SeniorCitizen Partner Dependents  tenure PhoneService     MultipleLines InternetService OnlineSecurity OnlineBackup DeviceProtection TechSupport StreamingTV StreamingMovies        Contract PaperlessBilling              PaymentMethod  MonthlyCharges TotalCharges Churn
+0  7590-VHVEG  Female              0     Yes         No       1           No  No phone service             DSL             No          Yes               No          No          No              No  Month-to-month              Yes           Electronic check           29.85        29.85    No
+1  5575-GNVDE    Male              0      No         No      34          Yes                No             DSL            Yes           No              Yes          No          No              No        One year               No               Mailed check           56.95       1889.5    No
+2  3668-QPYBK    Male              0      No         No       2          Yes                No             DSL            Yes          Yes               No          No          No              No  Month-to-month              Yes               Mailed check           53.85       108.15   Yes
+3  7795-CFOCW    Male              0      No         No      45           No  No phone service             DSL            Yes           No              Yes         Yes          No              No        One year               No  Bank transfer (automatic)           42.30      1840.75    No
+4  9237-HQITU  Female              0      No         No       2          Yes                No     Fiber optic             No           No               No          No          No              No  Month-to-month              Yes           Electronic check           70.70       151.65   Yes
+
+======================================================================
