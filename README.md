@@ -6,7 +6,8 @@ Autor: Diego Mauricio Bedoya Valencia - Institucion Universitaria Digital de Ant
 
 ## Proposito
 
-Proyecto de analitica descriptiva que, a partir de un dataset publico de Hugging Face, caracteriza y compara la cancelacion de clientes (*churn*) de una compania de telecomunicaciones. La etapa **AE2** define y documenta la necesidad analitica, obtiene el dataset, lo describe en Jupyter y genera automaticamente un resumen del DataFrame en `.txt`.
+Proyecto de analitica descriptiva que, a partir de un dataset publico de Hugging Face, caracteriza y compara la cancelacion de clientes (*churn*) de una compania de telecomunicaciones. - **AE2:** define la necesidad, obtiene el dataset, lo describe y genera un resumen `.txt`.
+- **AE3 (Actividad 4):** transforma y enriquece el dataset, responde las preguntas de negocio con tablas y exporta los datos preparados, las tablas `.csv` y un resumen `.txt` del DataFrame final.
 
 ## Necesidad (escenario hipotetico)
 
@@ -28,7 +29,64 @@ El equipo de **retencion de clientes** de la compania necesita saber **en que gr
 | Naturaleza | Datos **ficticios** creados por IBM Sample Datasets |
 | Fecha de consulta | 2026-10-25 |
 
-Los datos **no se guardan en el repositorio**: se descargan de Hugging Face al ejecutar el notebook. El dataset es publico y no requiere token ni aceptar condiciones de acceso.
+El dataset original se descarga de Hugging Face al ejecutar los notebooks (publico, sin token). El dataset **preparado** de AE3 si se publica en el repositorio, lo que permite la licencia CC BY 4.0 citando la fuente.
+
+## AE3 - Transformacion y enriquecimiento (Actividad 4)
+
+### Preguntas de negocio abordadas
+
+La pregunta general de AE2 se dividio en una linea base y 6 subpreguntas (mismo alcance):
+
+| # | Pregunta | Tabla de resultados |
+|---|---|---|
+| P0 | Tasa global de cancelacion (linea base) | `P0_tasa_global_Actividad4.csv` |
+| P1 | Tasa segun condiciones de la cuenta (contrato, pago, factura) | `P1_tasa_por_cuenta_Actividad4.csv` |
+| P2 | Tasa segun antiguedad | `P2_tasa_por_antiguedad_Actividad4.csv` |
+| P3 | Tasa segun servicios contratados | `P3_tasa_por_servicios_Actividad4.csv` |
+| P4 | Tasa segun perfil demografico | `P4_tasa_por_perfil_Actividad4.csv` |
+| P5 | Cargos de quienes cancelan vs. quienes permanecen | `P5a_estadisticas_cargos_Actividad4.csv`, `P5b_tasa_por_rango_cargo_Actividad4.csv` |
+| P6 | Segmentos combinados con mayor cancelacion | `P6_top10_segmentos_Actividad4.csv` |
+
+### Transformaciones
+
+- Espacios sobrantes eliminados en textos (11 valores).
+- `TotalCharges` de texto a numero; 11 vacios (clientes con `tenure = 0`) reemplazados por 0.
+- `SeniorCitizen` 0/1 a No/Si.
+- Categorias y nombres de columnas traducidos al espanol (`Churn` -> `cancelo`); `No` de internet unificado como `Sin internet`.
+- Categoricas a tipo `category`. Se conservan los 7.043 clientes (sin eliminar registros).
+- Controles: duplicados, nulos, rangos y coherencia entre servicios (todos OK).
+
+### Enriquecimiento (9 variables nuevas)
+
+`cancelo_flag`, `rango_antiguedad`, `rango_cargo_mensual`, `tipo_servicio`, `n_servicios_adicionales`, `rango_servicios_adicionales`, `pago_automatico`, `tiene_familia`, `cargo_mensual_perdido`. No se unio otra tabla.
+
+### Hallazgo principal
+
+Tasa global: **26,54 %**. La cancelacion se concentra en clientes **mes a mes (42,71 %)**, con **fibra optica (41,89 %)** y en su **primer ano (47,44 %)**. El segmento mes a mes + fibra + 0-12 meses llega a **70,20 %**.
+
+### Rutas de resultados
+
+| Archivo | Ruta |
+|---|---|
+| Notebook ejecutado | `AE3/notebooks/AE3_transformacion_enriquecimiento_Actividad4.ipynb` |
+| Funciones (.py) | `AE3/src/preparacion_Actividad4.py` |
+| Dataset preparado | `AE3/datos/telco_churn_preparado_Actividad4.csv` (7.043 x 30) |
+| Tablas de resultados y calidad | `AE3/resultados/tablas/*_Actividad4.csv` |
+| Resumen descriptivo | `AE3/resultados/resumen_dataframe_Actividad4.txt` (se regenera en cada ejecucion) |
+| Documento Word | `AE3/documento/BedoyaDiego_AE3_Transformacion_Enriquecimiento_Actividad4.docx` |
+
+### Ejecucion AE3
+
+Con el entorno instalado (ver *Pasos de ejecucion*):
+
+```bash
+jupyter notebook AE3/notebooks/AE3_transformacion_enriquecimiento_Actividad4.ipynb
+# o sin abrir Jupyter:
+cd AE3/notebooks
+jupyter nbconvert --to notebook --execute --inplace AE3_transformacion_enriquecimiento_Actividad4.ipynb
+```
+
+El notebook descarga el dataset, lo transforma, valida, enriquece, responde P0-P6, exporta los `.csv`, verifica que los archivos coincidan con el notebook y regenera el `.txt`.
 
 ## Estructura
 
@@ -47,6 +105,14 @@ proyecto_integrador/
     └── src/
         ├── hf_dataset_loader.py                      # Clase HFDatasetLoader: Hugging Face -> DataFrame
         └── dataset_summarizer.py                     # Clase DatasetSummarizer: DataFrame -> .txt
+└── AE3/
+    ├── datos/telco_churn_preparado_Actividad4.csv    # Dataset transformado y enriquecido
+    ├── documento/BedoyaDiego_AE3_..._Actividad4.docx  # Documento del avance actualizado
+    ├── notebooks/AE3_transformacion_enriquecimiento_Actividad4.ipynb
+    ├── resultados/
+    │   ├── resumen_dataframe_Actividad4.txt           # Resumen del DataFrame final
+    │   └── tablas/                                    # P0-P6 y tablas de calidad (.csv)
+    └── src/preparacion_Actividad4.py                  # Transformacion, enriquecimiento y tablas
 ```
 
 ## Pasos de ejecucion
@@ -59,10 +125,11 @@ cd proyecto_integrador
 python -m venv .venv
 # Windows: .venv\Scripts\activate   |   Linux/Mac: source .venv/bin/activate
 pip install -r requirements.txt
-jupyter notebook AE2/notebooks/AE2_exploracion_dataset.ipynb
+jupyter notebook AE2/notebooks/AE2_exploracion_dataset.ipynb   # AE2
+jupyter notebook AE3/notebooks/AE3_transformacion_enriquecimiento_Actividad4.ipynb   # AE3
 ```
 
-Ejecutar todas las celdas en orden (*Kernel > Restart & Run All*). El notebook:
+Ejecutar todas las celdas en orden (*Kernel > Restart & Run All*). El notebook de AE2:
 
 1. Descarga `scikit-learn/churn-prediction` (split `train`, revision fijada) y lo carga en un DataFrame.
 2. Muestra registros, dimensiones, columnas, tipos de datos y valores nulos por columna.
@@ -77,6 +144,9 @@ cd AE2/notebooks
 jupyter nbconvert --to notebook --execute --inplace AE2_exploracion_dataset.ipynb
 ```
 
-## Contenido del resumen `.txt`
+## Contenido de los resumenes `.txt`
 
 Procedencia (identificador, configuracion, split, revision, licencia, si es muestra), cantidad de filas y columnas, nombres y tipos de las columnas, valores nulos por columna (incluye textos vacios) y una muestra de 5 filas.
+
+
+El resumen de AE3 agrega: estadisticas descriptivas de las variables numericas, frecuencias de las categoricas, tasa global de cancelacion y el registro de transformaciones aplicadas.
