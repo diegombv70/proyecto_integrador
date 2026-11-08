@@ -1,0 +1,11 @@
+variable,segmento,clientes,cancelaciones,tasa_cancelacion_pct,diferencia_vs_global_pp,participacion_clientes_pct,participacion_cancelaciones_pct,cargo_mensual_promedio,cargo_mensual_perdido,participacion_cargo_perdido_pct
+genero,Femenino,3488,939,26.92,0.38,49.52,50.24,65.2,70248.55,50.49
+genero,Masculino,3555,930,26.16,-0.38,50.48,49.76,64.33,68882.3,49.51
+adulto_mayor,No,5901,1393,23.61,-2.93,83.79,74.53,61.85,100711.25,72.39
+adulto_mayor,Sí,1142,476,41.68,15.14,16.21,25.47,79.82,38419.6,27.61
+tiene_pareja,No,3641,1200,32.96,6.42,51.7,64.21,61.95,85741.15,61.63
+tiene_pareja,Sí,3402,669,19.66,-6.87,48.3,35.79,67.78,53389.7,38.37
+tiene_dependientes,No,4933,1543,31.28,4.74,70.04,82.56,67.0,115376.5,82.93
+tiene_dependientes,Sí,2110,326,15.45,-11.09,29.96,17.44,59.52,23754.35,17.07
+tiene_familia,No,3280,1123,34.24,7.7,46.57,60.09,62.98,80705.65,58.01
+tiene_familia,Sí,3763,746,19.82,-6.71,53.43,39.91,66.31,58425.2,41.99

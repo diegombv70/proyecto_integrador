@@ -1,0 +1,12 @@
+variable,segmento,clientes,cancelaciones,tasa_cancelacion_pct,diferencia_vs_global_pp,participacion_clientes_pct,participacion_cancelaciones_pct,cargo_mensual_promedio,cargo_mensual_perdido,participacion_cargo_perdido_pct
+tipo_contrato,Mes a mes,3875,1655,42.71,16.17,55.02,88.55,66.4,120847.1,86.86
+tipo_contrato,Un año,1473,166,11.27,-15.27,20.91,8.88,65.05,14118.45,10.15
+tipo_contrato,Dos años,1695,48,2.83,-23.71,24.07,2.57,60.77,4165.3,2.99
+metodo_pago,Cheque electrónico,2365,1071,45.29,18.75,33.58,57.3,76.26,84288.75,60.58
+metodo_pago,Cheque por correo,1612,308,19.11,-7.43,22.89,16.48,43.92,16803.6,12.08
+metodo_pago,Tarjeta de crédito (automática),1522,232,15.24,-11.29,21.61,12.41,66.51,17946.6,12.9
+metodo_pago,Transferencia bancaria (automática),1544,258,16.71,-9.83,21.92,13.8,67.19,20091.9,14.44
+factura_electronica,No,2872,469,16.33,-10.21,40.78,25.09,51.99,29620.85,21.29
+factura_electronica,Sí,4171,1400,33.57,7.03,59.22,74.91,73.55,109510.0,78.71
+pago_automatico,No,3977,1379,34.67,8.14,56.47,73.78,63.15,101092.35,72.66
+pago_automatico,Sí,3066,490,15.98,-10.56,43.53,26.22,66.85,38038.5,27.34

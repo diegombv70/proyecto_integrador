@@ -1,0 +1,7 @@
+transformacion,registros_o_columnas_afectados
+Quitar espacios en columnas de texto,11
+TotalCharges a numero; vacios (tenure = 0) reemplazados por 0,11
+SeniorCitizen 0/1 convertido a No/Sí,7043
+Categorias traducidas al espanol (17 columnas),7043
+Columnas renombradas a espanol snake_case,21
+Columnas categoricas convertidas a tipo category,17

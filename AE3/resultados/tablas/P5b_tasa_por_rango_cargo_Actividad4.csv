@@ -1,0 +1,5 @@
+variable,segmento,clientes,cancelaciones,tasa_cancelacion_pct,diferencia_vs_global_pp,participacion_clientes_pct,participacion_cancelaciones_pct,cargo_mensual_promedio,cargo_mensual_perdido,participacion_cargo_perdido_pct
+rango_cargo_mensual,Bajo (<35),1731,188,10.86,-15.68,24.58,10.06,22.0,4423.05,3.18
+rango_cargo_mensual,Medio (35-70),1721,407,23.65,-2.89,24.44,21.78,54.72,21726.8,15.62
+rango_cargo_mensual,Alto (70-90),1847,701,37.95,11.42,26.22,37.51,79.99,55926.9,40.2
+rango_cargo_mensual,Muy alto (>=90),1744,573,32.86,6.32,24.76,30.66,100.99,57054.1,41.01

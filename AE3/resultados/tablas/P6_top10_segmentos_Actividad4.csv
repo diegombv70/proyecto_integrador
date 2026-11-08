@@ -1,0 +1,11 @@
+ranking,variable,segmento,clientes,cancelaciones,tasa_cancelacion_pct,diferencia_vs_global_pp,participacion_clientes_pct,participacion_cancelaciones_pct,cargo_mensual_promedio,cargo_mensual_perdido,participacion_cargo_perdido_pct,tipo_contrato,servicio_internet,rango_antiguedad
+1,segmento_combinado,Mes a mes | Fibra óptica | 0-12 meses,916,643,70.2,43.66,13.01,34.4,82.08,53178.3,38.22,Mes a mes,Fibra óptica,0-12 meses
+2,segmento_combinado,Mes a mes | Fibra óptica | 13-24 meses,425,215,50.59,24.05,6.03,11.5,87.54,19046.9,13.69,Mes a mes,Fibra óptica,13-24 meses
+3,segmento_combinado,Mes a mes | Fibra óptica | 25-48 meses,521,226,43.38,16.84,7.4,12.09,91.24,20762.05,14.92,Mes a mes,Fibra óptica,25-48 meses
+4,segmento_combinado,Mes a mes | DSL | 0-12 meses,690,293,42.46,15.93,9.8,15.68,47.88,13351.9,9.6,Mes a mes,DSL,0-12 meses
+5,segmento_combinado,Mes a mes | Fibra óptica | 49-72 meses,266,78,29.32,2.79,3.78,4.17,94.95,7494.75,5.39,Mes a mes,Fibra óptica,49-72 meses
+6,segmento_combinado,Mes a mes | DSL | 13-24 meses,232,55,23.71,-2.83,3.29,2.94,52.68,2765.4,1.99,Mes a mes,DSL,13-24 meses
+7,segmento_combinado,Mes a mes | Sin internet | 0-12 meses,388,88,22.68,-3.86,5.51,4.71,20.27,1771.25,1.27,Mes a mes,Sin internet,0-12 meses
+8,segmento_combinado,Un año | Fibra óptica | 25-48 meses,154,31,20.13,-6.41,2.19,1.66,96.04,3039.1,2.18,Un año,Fibra óptica,25-48 meses
+9,segmento_combinado,Un año | Fibra óptica | 49-72 meses,355,67,18.87,-7.66,5.04,3.58,100.49,6926.2,4.98,Un año,Fibra óptica,49-72 meses
+10,segmento_combinado,Mes a mes | DSL | 25-48 meses,227,36,15.86,-10.68,3.22,1.93,53.88,1755.75,1.26,Mes a mes,DSL,25-48 meses

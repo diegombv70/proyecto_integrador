@@ -1,0 +1,11 @@
+control,registros_con_problema,resultado
+id_cliente duplicado,0,OK
+filas duplicadas completas,0,OK
+"filas iguales salvo id_cliente (clientes distintos, se conservan)",22,Informativo
+valores nulos (total),0,OK
+antiguedad_meses fuera de 0-72,0,OK
+cargo_mensual <= 0,0,OK
+cargo_total < 0,0,OK
+lineas_multiples incoherente con servicio_telefonico,0,OK
+servicios adicionales incoherentes con servicio_internet,0,OK
+"cargo_total / (cargo_mensual x antiguedad) fuera de 0,5-2",0,OK

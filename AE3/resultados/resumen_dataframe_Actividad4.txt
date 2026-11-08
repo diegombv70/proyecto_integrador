@@ -1,0 +1,283 @@
+==============================================================================
+RESUMEN DEL DATAFRAME FINAL - TELCO CHURN (AE3)
+Generado: 2026-11-08 18:34:57
+==============================================================================
+
+1. Procedencia
+--------------
+Dataset           : Telco Customer Churn (IBM Sample Dataset)
+Identificador     : scikit-learn/churn-prediction
+Revision          : aa09900373d90780ee70d27571775aff0e51569c
+Licencia          : CC BY 4.0 (permite redistribuir citando la fuente)
+Estado            : Transformado y enriquecido (AE3 - Actividad 4)
+Muestra           : No - incluye los 7.043 clientes
+Dataset exportado : AE3/datos/telco_churn_preparado_Actividad4.csv
+
+2. Dimensiones
+--------------
+Filas: 7043
+Columnas: 30
+
+3. Columnas y tipos de datos
+----------------------------
+                                 tipo  valores_unicos
+id_cliente                     string            7043
+genero                       category               2
+adulto_mayor                 category               2
+tiene_pareja                 category               2
+tiene_dependientes           category               2
+antiguedad_meses                int64              73
+servicio_telefonico          category               2
+lineas_multiples             category               3
+servicio_internet            category               3
+seguridad_en_linea           category               3
+respaldo_en_linea            category               3
+proteccion_dispositivos      category               3
+soporte_tecnico              category               3
+streaming_tv                 category               3
+streaming_peliculas          category               3
+tipo_contrato                category               3
+factura_electronica          category               2
+metodo_pago                  category               4
+cargo_mensual                 float64            1585
+cargo_total                   float64            6531
+cancelo                      category               2
+cancelo_flag                    int64               2
+rango_antiguedad             category               4
+rango_cargo_mensual          category               4
+tipo_servicio                category               3
+n_servicios_adicionales         int64               7
+rango_servicios_adicionales  category               4
+pago_automatico              category               2
+tiene_familia                category               2
+cargo_mensual_perdido         float64             911
+
+4. Valores nulos por columna
+----------------------------
+Total de valores nulos: 0
+                             nulos
+id_cliente                       0
+genero                           0
+adulto_mayor                     0
+tiene_pareja                     0
+tiene_dependientes               0
+antiguedad_meses                 0
+servicio_telefonico              0
+lineas_multiples                 0
+servicio_internet                0
+seguridad_en_linea               0
+respaldo_en_linea                0
+proteccion_dispositivos          0
+soporte_tecnico                  0
+streaming_tv                     0
+streaming_peliculas              0
+tipo_contrato                    0
+factura_electronica              0
+metodo_pago                      0
+cargo_mensual                    0
+cargo_total                      0
+cancelo                          0
+cancelo_flag                     0
+rango_antiguedad                 0
+rango_cargo_mensual              0
+tipo_servicio                    0
+n_servicios_adicionales          0
+rango_servicios_adicionales      0
+pago_automatico                  0
+tiene_familia                    0
+cargo_mensual_perdido            0
+
+5. Estadisticas descriptivas (variables numericas)
+--------------------------------------------------
+                          count     mean      std    min     25%      50%      75%      max
+antiguedad_meses         7043.0    32.37    24.56   0.00    9.00    29.00    55.00    72.00
+cargo_mensual            7043.0    64.76    30.09  18.25   35.50    70.35    89.85   118.75
+cargo_total              7043.0  2279.73  2266.79   0.00  398.55  1394.55  3786.60  8684.80
+cancelo_flag             7043.0     0.27     0.44   0.00    0.00     0.00     1.00     1.00
+n_servicios_adicionales  7043.0     2.04     1.85   0.00    0.00     2.00     3.00     6.00
+cargo_mensual_perdido    7043.0    19.75    35.24   0.00    0.00     0.00    24.10   118.35
+
+6. Frecuencias (variables categoricas)
+--------------------------------------
+genero:
+           clientes  porcentaje
+genero                         
+Masculino      3555       50.48
+Femenino       3488       49.52
+
+adulto_mayor:
+              clientes  porcentaje
+adulto_mayor                      
+No                5901       83.79
+Sí                1142       16.21
+
+tiene_pareja:
+              clientes  porcentaje
+tiene_pareja                      
+No                3641        51.7
+Sí                3402        48.3
+
+tiene_dependientes:
+                    clientes  porcentaje
+tiene_dependientes                      
+No                      4933       70.04
+Sí                      2110       29.96
+
+servicio_telefonico:
+                     clientes  porcentaje
+servicio_telefonico                      
+Sí                       6361       90.32
+No                        682        9.68
+
+lineas_multiples:
+                  clientes  porcentaje
+lineas_multiples                      
+No                    3390       48.13
+Sí                    2971       42.18
+Sin teléfono           682        9.68
+
+servicio_internet:
+                   clientes  porcentaje
+servicio_internet                      
+Fibra óptica           3096       43.96
+DSL                    2421       34.37
+Sin internet           1526       21.67
+
+seguridad_en_linea:
+                    clientes  porcentaje
+seguridad_en_linea                      
+No                      3498       49.67
+Sí                      2019       28.67
+Sin internet            1526       21.67
+
+respaldo_en_linea:
+                   clientes  porcentaje
+respaldo_en_linea                      
+No                     3088       43.84
+Sí                     2429       34.49
+Sin internet           1526       21.67
+
+proteccion_dispositivos:
+                         clientes  porcentaje
+proteccion_dispositivos                      
+No                           3095       43.94
+Sí                           2422       34.39
+Sin internet                 1526       21.67
+
+soporte_tecnico:
+                 clientes  porcentaje
+soporte_tecnico                      
+No                   3473       49.31
+Sí                   2044       29.02
+Sin internet         1526       21.67
+
+streaming_tv:
+              clientes  porcentaje
+streaming_tv                      
+No                2810       39.90
+Sí                2707       38.44
+Sin internet      1526       21.67
+
+streaming_peliculas:
+                     clientes  porcentaje
+streaming_peliculas                      
+No                       2785       39.54
+Sí                       2732       38.79
+Sin internet             1526       21.67
+
+tipo_contrato:
+               clientes  porcentaje
+tipo_contrato                      
+Mes a mes          3875       55.02
+Dos años           1695       24.07
+Un año             1473       20.91
+
+factura_electronica:
+                     clientes  porcentaje
+factura_electronica                      
+Sí                       4171       59.22
+No                       2872       40.78
+
+metodo_pago:
+                                     clientes  porcentaje
+metodo_pago                                              
+Cheque electrónico                       2365       33.58
+Cheque por correo                        1612       22.89
+Transferencia bancaria (automática)      1544       21.92
+Tarjeta de crédito (automática)          1522       21.61
+
+cancelo:
+         clientes  porcentaje
+cancelo                      
+No           5174       73.46
+Sí           1869       26.54
+
+rango_antiguedad:
+                  clientes  porcentaje
+rango_antiguedad                      
+49-72 meses           2239       31.79
+0-12 meses            2186       31.04
+25-48 meses           1594       22.63
+13-24 meses           1024       14.54
+
+rango_cargo_mensual:
+                     clientes  porcentaje
+rango_cargo_mensual                      
+Alto (70-90)             1847       26.22
+Muy alto (>=90)          1744       24.76
+Bajo (<35)               1731       24.58
+Medio (35-70)            1721       24.44
+
+tipo_servicio:
+                     clientes  porcentaje
+tipo_servicio                            
+Teléfono e internet      4835       68.65
+Solo teléfono            1526       21.67
+Solo internet             682        9.68
+
+rango_servicios_adicionales:
+                             clientes  porcentaje
+rango_servicios_adicionales                      
+0                                2219       31.51
+1-2                              1999       28.38
+3-4                              1970       27.97
+5-6                               855       12.14
+
+pago_automatico:
+                 clientes  porcentaje
+pago_automatico                      
+No                   3977       56.47
+Sí                   3066       43.53
+
+tiene_familia:
+               clientes  porcentaje
+tiene_familia                      
+Sí                 3763       53.43
+No                 3280       46.57
+
+7. Indicador principal
+----------------------
+Clientes: 7043
+Cancelaciones: 1869
+Tasa de cancelacion global: 26.54 %
+
+8. Transformaciones aplicadas
+-----------------------------
+                                               transformacion  registros_o_columnas_afectados
+                         Quitar espacios en columnas de texto                              11
+TotalCharges a numero; vacios (tenure = 0) reemplazados por 0                              11
+                         SeniorCitizen 0/1 convertido a No/Sí                            7043
+               Categorias traducidas al espanol (17 columnas)                            7043
+                    Columnas renombradas a espanol snake_case                              21
+             Columnas categoricas convertidas a tipo category                              17
+
+9. Muestra (primeras 5 filas)
+-----------------------------
+   id_cliente     genero adulto_mayor tiene_pareja tiene_dependientes  antiguedad_meses servicio_telefonico lineas_multiples servicio_internet seguridad_en_linea respaldo_en_linea proteccion_dispositivos soporte_tecnico streaming_tv streaming_peliculas tipo_contrato factura_electronica                          metodo_pago  cargo_mensual  cargo_total cancelo  cancelo_flag rango_antiguedad rango_cargo_mensual        tipo_servicio  n_servicios_adicionales rango_servicios_adicionales pago_automatico tiene_familia  cargo_mensual_perdido
+0  7590-VHVEG   Femenino           No           Sí                 No                 1                  No     Sin teléfono               DSL                 No                Sí                      No              No           No                  No     Mes a mes                  Sí                   Cheque electrónico          29.85        29.85      No             0       0-12 meses          Bajo (<35)        Solo internet                        1                         1-2              No            Sí                   0.00
+1  5575-GNVDE  Masculino           No           No                 No                34                  Sí               No               DSL                 Sí                No                      Sí              No           No                  No        Un año                  No                    Cheque por correo          56.95      1889.50      No             0      25-48 meses       Medio (35-70)  Teléfono e internet                        2                         1-2              No            No                   0.00
+2  3668-QPYBK  Masculino           No           No                 No                 2                  Sí               No               DSL                 Sí                Sí                      No              No           No                  No     Mes a mes                  Sí                    Cheque por correo          53.85       108.15      Sí             1       0-12 meses       Medio (35-70)  Teléfono e internet                        2                         1-2              No            No                  53.85
+3  7795-CFOCW  Masculino           No           No                 No                45                  No     Sin teléfono               DSL                 Sí                No                      Sí              Sí           No                  No        Un año                  No  Transferencia bancaria (automática)          42.30      1840.75      No             0      25-48 meses       Medio (35-70)        Solo internet                        3                         3-4              Sí            No                   0.00
+4  9237-HQITU   Femenino           No           No                 No                 2                  Sí               No      Fibra óptica                 No                No                      No              No           No                  No     Mes a mes                  Sí                   Cheque electrónico          70.70       151.65      Sí             1       0-12 meses        Alto (70-90)  Teléfono e internet                        0                           0              No            No                  70.70
+
+==============================================================================
