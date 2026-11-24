@@ -35,7 +35,7 @@ El dataset original se descarga de Hugging Face al ejecutar los notebooks (publi
 ## AE4 - Metricas y visualizacion en Streamlit (Actividad 5)
 
 **Aplicacion:** `AE4/app_Actividad5.py` (Streamlit + Plotly).
-**Enlace publicado:** _pendiente de publicar en Streamlit Community Cloud_
+**Enlace publicado:** https://proyectointegrador-yk2wn8y6ydgqgojp7kzzwm.streamlit.app
 
 La app carga el dataset preparado (`AE3/datos/telco_churn_preparado_Actividad4.csv`) y las tablas de resultados (`AE3/resultados/tablas/*_Actividad4.csv`). Tiene un menu con:
 
