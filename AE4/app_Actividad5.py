@@ -75,7 +75,8 @@ def grafico_tasa(tabla, titulo, eje_y="Segmento", orden=None, horizontal=False):
         fig = go.Figure(go.Bar(x=t["segmento"].astype(str), y=t["tasa_cancelacion_pct"], marker_color=t["color"],
                                text=t["etiqueta"], textposition="outside", customdata=custom, hovertemplate=hover))
         fig.add_hline(y=TASA_GLOBAL, line_dash="dash", line_color=GRIS,
-                      annotation_text=f"Tasa global {fmt(TASA_GLOBAL)} %", annotation_position="top left")
+                      annotation_text=f"Tasa global {fmt(TASA_GLOBAL)} %", annotation_position="top right",
+                      annotation_bgcolor="rgba(255,255,255,0.85)")
         fig.update_layout(yaxis_title="Tasa de cancelación (%)", xaxis_title=eje_y)
     fig.update_layout(title=titulo, height=420, margin=dict(t=60, b=40, l=10, r=10), showlegend=False,
                       plot_bgcolor="white")
