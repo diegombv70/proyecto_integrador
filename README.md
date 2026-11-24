@@ -7,6 +7,7 @@ Autor: Diego Mauricio Bedoya Valencia - Institucion Universitaria Digital de Ant
 ## Proposito
 
 Proyecto de analitica descriptiva que, a partir de un dataset publico de Hugging Face, caracteriza y compara la cancelacion de clientes (*churn*) de una compania de telecomunicaciones. - **AE2:** define la necesidad, obtiene el dataset, lo describe y genera un resumen `.txt`.
+- **AE4 (Actividad 5):** presenta las metricas y graficos que responden las preguntas en una aplicacion de Streamlit e integra el informe final en PDF.
 - **AE3 (Actividad 4):** transforma y enriquece el dataset, responde las preguntas de negocio con tablas y exporta los datos preparados, las tablas `.csv` y un resumen `.txt` del DataFrame final.
 
 ## Necesidad (escenario hipotetico)
@@ -30,6 +31,44 @@ El equipo de **retencion de clientes** de la compania necesita saber **en que gr
 | Fecha de consulta | 2026-10-25 |
 
 El dataset original se descarga de Hugging Face al ejecutar los notebooks (publico, sin token). El dataset **preparado** de AE3 si se publica en el repositorio, lo que permite la licencia CC BY 4.0 citando la fuente.
+
+## AE4 - Metricas y visualizacion en Streamlit (Actividad 5)
+
+**Aplicacion:** `AE4/app_Actividad5.py` (Streamlit + Plotly).
+**Enlace publicado:** _pendiente de publicar en Streamlit Community Cloud_
+
+La app carga el dataset preparado (`AE3/datos/telco_churn_preparado_Actividad4.csv`) y las tablas de resultados (`AE3/resultados/tablas/*_Actividad4.csv`). Tiene un menu con:
+
+| Seccion | Contenido |
+|---|---|
+| Inicio | Necesidad, preguntas de negocio, identificacion del dataset e indicadores clave |
+| P0 a P6 | Metrica (definicion, calculo, unidad, periodo), graficos interactivos, interpretacion, decision que apoya, limitacion y tabla de resultados |
+| Conclusiones | Conclusiones, recomendaciones, limitaciones y verificacion de que las cifras coinciden con el notebook |
+
+### Ejecutar la app
+
+```bash
+pip install -r requirements.txt
+streamlit run AE4/app_Actividad5.py
+```
+
+Se abre en `http://localhost:8501`.
+
+### Publicar en Streamlit Community Cloud
+
+En https://share.streamlit.io: *Create app* -> repositorio `diegombv70/proyecto_integrador`, rama `main`, archivo principal `AE4/app_Actividad5.py`. Las dependencias de la app estan en `AE4/requirements.txt`.
+
+### Archivos AE4
+
+| Archivo | Ruta |
+|---|---|
+| Aplicacion Streamlit | `AE4/app_Actividad5.py` |
+| Dependencias de la app | `AE4/requirements.txt` |
+| Informe final (PDF) | `AE4/documento/BedoyaDiego_AE4_Informe_Final_Actividad5.pdf` |
+| Informe final (Word) | `AE4/documento/BedoyaDiego_AE4_Informe_Final_Actividad5.docx` |
+| Figuras del informe | `AE4/figuras/` |
+| Capturas de la app | `AE4/capturas/` |
+| Scripts del informe | `AE4/scripts/` (capturar figuras, generar Word y PDF) |
 
 ## AE3 - Transformacion y enriquecimiento (Actividad 4)
 
@@ -113,6 +152,12 @@ proyecto_integrador/
     │   ├── resumen_dataframe_Actividad4.txt           # Resumen del DataFrame final
     │   └── tablas/                                    # P0-P6 y tablas de calidad (.csv)
     └── src/preparacion_Actividad4.py                  # Transformacion, enriquecimiento y tablas
+└── AE4/
+    ├── app_Actividad5.py                              # Aplicacion Streamlit
+    ├── requirements.txt                               # Dependencias de la app
+    ├── documento/                                     # Informe final .docx y .pdf
+    ├── figuras/ y capturas/                           # Imagenes de la app
+    └── scripts/                                       # Generacion de figuras, Word y PDF
 ```
 
 ## Pasos de ejecucion
@@ -120,7 +165,7 @@ proyecto_integrador/
 Requisitos: Python 3.10 o superior y conexion a internet.
 
 ```bash
-git clone https://gitlab.com/deigo.bedoya/proyecto_integrador.git
+git clone https://github.com/diegombv70/proyecto_integrador.git
 cd proyecto_integrador
 python -m venv .venv
 # Windows: .venv\Scripts\activate   |   Linux/Mac: source .venv/bin/activate
